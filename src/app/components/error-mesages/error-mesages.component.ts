@@ -21,7 +21,7 @@ export class ErrorMesagesComponent implements OnInit, OnChanges, DoCheck {
   }
 
   ngDoCheck() {
-  	console.log('DoCheck', this.field)
+  	// console.log('DoCheck', this.field)
   	if (this.field.dirty) {
 			this.checkErrors();
   	}  	
@@ -54,10 +54,11 @@ export class ErrorMesagesComponent implements OnInit, OnChanges, DoCheck {
 
   	if (errors.indexOf('required') > -1) {
 			this.errorMessages.push('Значение не может быть пустым');
-  	}  	  	
-  	// errors.forEach(e => {
-  	// 	console.log(typeof this.field.errors, this.field.errors[e])
-  	// });
+  	}  	 
+
+  	if (errors.indexOf('floorValidator') > -1) {
+			this.errorMessages.push('В этом доме нет такого этажа');
+  	}    	 	
   }
 
 }
