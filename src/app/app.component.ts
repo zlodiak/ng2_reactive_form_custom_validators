@@ -12,11 +12,12 @@ export class AppComponent implements OnInit {
 
 	ngOnInit() {
     this.form = new FormGroup({
-      'year':            			new FormControl(1980, [ 
+      'year':            			new FormControl(null, [ 
                                                       Validators.required, 
                                                       Validators.minLength(4), 
                                                       Validators.maxLength(4),
                                                       Validators.min(1900),
+                                                      Validators.max((new Date()).getFullYear()),
                                                       Validators.pattern("^[0-9]*$")
                                                     ]),
   		'floor':                new FormControl(1, [
@@ -40,6 +41,6 @@ export class AppComponent implements OnInit {
 	}
 
 	submit() {
-		console.log('submit');
+		console.log('submit', this.form);
 	}
 }

@@ -1,21 +1,44 @@
 <form class="form" [formGroup]="form" (ngSubmit)="submit()">
   <div class="line">
-    <input type="text" name="year" placeholder="year" formControlName="year">
+    <input 
+      type="text" 
+      name="year" 
+      placeholder="year" 
+      [ngClass]="{'error': !form.get('year').valid && form.get('year').dirty}"
+      formControlName="year">
   </div>
 
   <div class="line">
-    <input type="text" name="floor" placeholder="floor" formControlName="floor">
+    <input 
+      type="text" 
+      name="floor" 
+      placeholder="floor" 
+      [ngClass]="{'error': !form.get('floor').valid && form.get('floor').dirty}"
+      formControlName="floor">
   </div>
 
   <div class="line">
-    <input type="text" name="floorsCount" placeholder="floorsCount" formControlName="floorsCount">
+    <input 
+      type="text" 
+      name="floorsCount" 
+      placeholder="floorsCount" 
+      [ngClass]="{'error': !form.get('floorsCount').valid && form.get('floorsCount').dirty}"
+      formControlName="floorsCount">
   </div>      
 
   <div class="line">
-    <input type="text" name="radius" placeholder="radius" formControlName="radius">
+    <input 
+      type="text" 
+      name="radius" 
+      placeholder="radius" 
+      [ngClass]="{'error': !form.get('radius').valid && form.get('radius').dirty}"
+      formControlName="radius">
   </div>  
 
   <div class="line">
-    <button type="submit" class="submit">Submit</button>
+    <button 
+      type="submit" 
+      class="submit">Submit
+    </button>
   </div>    
 </form>
