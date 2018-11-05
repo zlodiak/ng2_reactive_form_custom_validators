@@ -41,11 +41,11 @@ export class ErrorMesagesComponent implements OnInit, OnChanges, DoCheck {
   	}
 
   	if (errors.indexOf('max') > -1) {
-			this.errorMessages.push('Максимальное значение ' + (new Date()).getFullYear() + '.');
+			this.errorMessages.push('Максимальное значение ' + this.field.errors.max.max + '.');
   	}  	
 
   	if (errors.indexOf('min') > -1) {
-			this.errorMessages.push('Минимальное значение 1900.');
+			this.errorMessages.push('Минимальное значение ' + this.field.errors.min.min + '.');
   	}  	  	
 
   	if (errors.indexOf('pattern') > -1) {

@@ -20,19 +20,19 @@ export class AppComponent implements OnInit {
                                                       Validators.max((new Date()).getFullYear()),
                                                       Validators.pattern("^[0-9]*$")
                                                     ]),
-  		'floor':                new FormControl(1, [
+  		'floor':                new FormControl(null, [
                                                       Validators.required,
                                                       Validators.min(1),
                                                       Validators.max(50),
                                                       Validators.pattern("^[0-9]*$")
                                                     ]),
-  		'floorsCount':          new FormControl(5, [
+  		'floorsCount':          new FormControl(null, [
                                                       Validators.required,
                                                       Validators.min(1),
                                                       Validators.max(50),
                                                       Validators.pattern("^[0-9]*$")
                                                     ]),
-  		'radius':               new FormControl(1000, [
+  		'radius':               new FormControl(null, [
                                                       Validators.required,
                                                       Validators.min(1),
                                                       Validators.pattern("^[0-9]*$")
