@@ -6,6 +6,7 @@
       placeholder="year" 
       [ngClass]="{'error': !form.get('year').valid && form.get('year').dirty}"
       formControlName="year">
+      <error-mesages [field]="form.get('year')"></error-mesages>
   </div>
 
   <div class="line">
@@ -15,6 +16,7 @@
       placeholder="floor" 
       [ngClass]="{'error': !form.get('floor').valid && form.get('floor').dirty}"
       formControlName="floor">
+      <error-mesages [field]="form.get('floor')"></error-mesages>
   </div>
 
   <div class="line">
@@ -24,6 +26,7 @@
       placeholder="floorsCount" 
       [ngClass]="{'error': !form.get('floorsCount').valid && form.get('floorsCount').dirty}"
       formControlName="floorsCount">
+      <error-mesages [field]="form.get('floorsCount')"></error-mesages>
   </div>      
 
   <div class="line">
@@ -33,6 +36,7 @@
       placeholder="radius" 
       [ngClass]="{'error': !form.get('radius').valid && form.get('radius').dirty}"
       formControlName="radius">
+      <error-mesages [field]="form.get('radius')"></error-mesages>
   </div>  
 
   <div class="line">

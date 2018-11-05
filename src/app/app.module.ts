@@ -4,11 +4,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { ErrorMesagesComponent } from './components/error-mesages/error-mesages.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ErrorMesagesComponent
   ],
   imports: [
   	ReactiveFormsModule,
