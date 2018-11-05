@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, DoCheck {
 
 	form: FormGroup;
 
@@ -41,8 +41,13 @@ export class AppComponent implements OnInit {
 		})
 	}
 
-	submit() {
+	ngDoCheck() {
+		this.form.get('floor').updateValueAndValidity();
+	}
+
+	submit() {		
 		console.log('submit', this.form);
+		alert('submitted!');
 	}
 
 	floorValidator(control: FormControl) {
